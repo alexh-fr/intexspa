@@ -1,7 +1,7 @@
 {
   "id": "intexspa",
   "name": "Intex Spa",
-  "pluginVersion": "0.1.0",
+  "pluginVersion": "0.1.1",
   "description": "Plugin pour gérer les spa Intex depuis le réseau local",
   "licence": "AGPL",
   "author": "Alex H.",

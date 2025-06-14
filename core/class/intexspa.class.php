@@ -215,6 +215,11 @@ class intexspa extends eqLogic {
 
                 // Commande globale pour mettre à jour les timers
                 ['name' => 'Rafraîchir Timers', 'logicalId' => 'refresh_timers', 'type' => 'action', 'subType' => 'other']
+
+            // ===============================================
+            // COMMANDES PROGRAMMATION
+            // ===============================================
+
             ];
             
             foreach ($commands as $cmdConfig) {

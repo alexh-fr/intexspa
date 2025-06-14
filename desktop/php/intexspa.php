@@ -157,143 +157,26 @@
             </div>
 
 
-
             <div role="tabpanel" class="tab-pane" id="infotab">
-                <fieldset style="margin-top: 20px;">
-                    <legend><i class="fas fa-cogs"></i> {{Commandes Infos}}</legend>
-                    <div class="table-responsive">
-                        <table id="table_cmd_info" class="table table-bordered table-condensed">
-                            <thead>
-                                <tr>
-                                    <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
-                                    <th style="min-width:200px;width:350px;">{{Nom}}</th>
-                                    <th style="min-width:260px;">{{Options}}</th>
-                                    <th>{{Etat}}</th>
-                                    <th style="min-width:80px;width:140px;">{{Actions}}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </fieldset>
+                <?php require_once __DIR__ . '/info.tab.php'; ?>
             </div>
 
             <div role="tabpanel" class="tab-pane" id="actiontab">
-                <fieldset style="margin-top: 20px;">
-                    <legend><i class="fas fa-cogs"></i> {{Commandes Actions}}</legend>
-                    <div class="table-responsive">
-                        <table id="table_cmd_action" class="table table-bordered table-condensed">
-                            <thead>
-                                <tr>
-                                    <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
-                                    <th style="min-width:200px;width:350px;">{{Nom}}</th>
-                                    <th style="min-width:260px;">{{Options}}</th>
-                                    <th>{{Etat}}</th>
-                                    <th style="min-width:80px;width:140px;">{{Actions}}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </fieldset>
+                <?php require_once __DIR__ . '/action.tab.php'; ?>
             </div>
-
 
 
             <div role="tabpanel" class="tab-pane" id="timertab">
-                <fieldset style="margin-top: 20px;">
-                    <legend><i class="fas fa-cogs"></i> {{Commandes Timer}}</legend>
-                    <div class="table-responsive">
-                        <table id="table_cmd_timer" class="table table-bordered table-condensed">
-                            <thead>
-                                <tr>
-                                    <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
-                                    <th style="min-width:200px;width:350px;">{{Nom}}</th>
-                                    <th style="min-width:260px;">{{Options}}</th>
-                                    <th>{{Etat}}</th>
-                                    <th style="min-width:80px;width:140px;">{{Actions}}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </fieldset>
-
-                <fieldset style="margin-top: 20px;">
-                    <legend><i class="fas fa-cogs"></i> {{Commandes Timer Filtration}}</legend>
-                    <div class="table-responsive">
-                        <table id="table_cmd_timer_filtration" class="table table-bordered table-condensed">
-                            <thead>
-                                <tr>
-                                    <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
-                                    <th style="min-width:200px;width:350px;">{{Nom}}</th>
-                                    <th style="min-width:260px;">{{Options}}</th>
-                                    <th>{{Etat}}</th>
-                                    <th style="min-width:80px;width:140px;">{{Actions}}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </fieldset>
-
-                <fieldset style="margin-top: 20px;">
-                    <legend><i class="fas fa-cogs"></i> {{Commandes Timer Chauffage}}</legend>
-                    <div class="table-responsive">
-                        <table id="table_cmd_timer_heater" class="table table-bordered table-condensed">
-                            <thead>
-                                <tr>
-                                    <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
-                                    <th style="min-width:200px;width:350px;">{{Nom}}</th>
-                                    <th style="min-width:260px;">{{Options}}</th>
-                                    <th>{{Etat}}</th>
-                                    <th style="min-width:80px;width:140px;">{{Actions}}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </fieldset>
-
-                <fieldset style="margin-top: 20px;">
-                    <legend><i class="fas fa-cogs"></i> {{Commandes Timer Désinfection}}</legend>
-                    <div class="table-responsive">
-                        <table id="table_cmd_timer_sanitizer" class="table table-bordered table-condensed">
-                            <thead>
-                                <tr>
-                                    <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
-                                    <th style="min-width:200px;width:350px;">{{Nom}}</th>
-                                    <th style="min-width:260px;">{{Options}}</th>
-                                    <th>{{Etat}}</th>
-                                    <th style="min-width:80px;width:140px;">{{Actions}}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </fieldset>
+                <?php require_once __DIR__ . '/timer.tab.php'; ?>
             </div>
 
-            <div role="tabpanel" class="tab-pane" id="programtab">
-                <p>En cours de développement ... (Programmation)</p>
+            <div role="tabpanel" class="tab-pane" id="programtab">               
+                <?php require_once __DIR__ . '/program.tab.php'; ?>
             </div>
 
             <div role="tabpanel" class="tab-pane" id="heattab">
-                <p>En cours de développement ... (Chauffage intelligent)</p>
+                <?php require_once __DIR__ . '/heat.tab.php'; ?>
             </div>
-
 
         </div>
     </div>

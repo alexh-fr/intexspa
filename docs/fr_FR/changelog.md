@@ -9,6 +9,12 @@ description: Historique des versions du plugin IntexSpa
 
 *Important : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.*
 
+## Version 0.1.1 - 2025-06-15
+- ⚙️ Mise au propre du code pour la gestion des timers
+- 🐛 Corrections des bugs sur la gestion des timers
+- 🔧 Améliorations de l'affichage des commandes actions/infos
+- 🔧 Modifications onglet "Programmations" et "Chauffage intelligent"
+
 ## Version 0.1.0 - 2025-06-10
 
 ### 🎉 Version initiale
