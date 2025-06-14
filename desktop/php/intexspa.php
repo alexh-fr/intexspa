@@ -52,7 +52,8 @@
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation"><a href="#" class="eqLogicAction" aria-controls="home" role="tab" data-toggle="tab" data-action="returnToThumbnailDisplay"><i class="fas fa-arrow-circle-left"></i></a></li>
             <li role="presentation" class="active"><a href="#eqlogictab" aria-controls="home" role="tab" data-toggle="tab"><i class="fas fa-tachometer-alt"></i> {{Équipement}}</a></li>
-            <li role="presentation"><a href="#commandtab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fas fa-list-alt"></i> {{Commandes}}</a></li>
+            <li role="presentation"><a href="#infotab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fas fa-info-circle"></i> {{Informations}}</a></li>
+            <li role="presentation"><a href="#actiontab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fas fa-play"></i> {{Commandes}}</a></li>
             <li role="presentation"><a href="#timertab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fas fa-clock"></i> {{Timer}}</a></li>
             <li role="presentation"><a href="#programtab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fas fa-calendar-alt"></i> {{Programmation}}</a></li>
             <li role="presentation"><a href="#heattab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fas fa-fire"></i> {{Chauffage intelligent}}</a></li>
@@ -155,30 +156,134 @@
                 </form>
             </div>
 
-            <div role="tabpanel" class="tab-pane" id="commandtab">
-                <!--
-                <a class="btn btn-success btn-sm cmdAction pull-right" data-action="add" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Ajouter une commande}}</a>
-                <br/><br/>
-                -->
-                <div class="table-responsive">
-                    <table id="table_cmd" class="table table-bordered table-condensed">
-                        <thead>
-                            <tr>
-                                <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
-                                <th style="min-width:200px;width:350px;">{{Nom}}</th>
-                                <th style="min-width:260px;">{{Options}}</th>
-                                <th>{{Etat}}</th>
-                                <th style="min-width:80px;width:140px;">{{Actions}}</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
+
+
+            <div role="tabpanel" class="tab-pane" id="infotab">
+                <fieldset style="margin-top: 20px;">
+                    <legend><i class="fas fa-cogs"></i> {{Commandes Infos}}</legend>
+                    <div class="table-responsive">
+                        <table id="table_cmd_info" class="table table-bordered table-condensed">
+                            <thead>
+                                <tr>
+                                    <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
+                                    <th style="min-width:200px;width:350px;">{{Nom}}</th>
+                                    <th style="min-width:260px;">{{Options}}</th>
+                                    <th>{{Etat}}</th>
+                                    <th style="min-width:80px;width:140px;">{{Actions}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
             </div>
 
+            <div role="tabpanel" class="tab-pane" id="actiontab">
+                <fieldset style="margin-top: 20px;">
+                    <legend><i class="fas fa-cogs"></i> {{Commandes Actions}}</legend>
+                    <div class="table-responsive">
+                        <table id="table_cmd_action" class="table table-bordered table-condensed">
+                            <thead>
+                                <tr>
+                                    <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
+                                    <th style="min-width:200px;width:350px;">{{Nom}}</th>
+                                    <th style="min-width:260px;">{{Options}}</th>
+                                    <th>{{Etat}}</th>
+                                    <th style="min-width:80px;width:140px;">{{Actions}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+            </div>
+
+
+
             <div role="tabpanel" class="tab-pane" id="timertab">
-                <?php include_once('tab/timerHandler.tab.php'); ?>
+                <fieldset style="margin-top: 20px;">
+                    <legend><i class="fas fa-cogs"></i> {{Commandes Timer}}</legend>
+                    <div class="table-responsive">
+                        <table id="table_cmd_timer" class="table table-bordered table-condensed">
+                            <thead>
+                                <tr>
+                                    <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
+                                    <th style="min-width:200px;width:350px;">{{Nom}}</th>
+                                    <th style="min-width:260px;">{{Options}}</th>
+                                    <th>{{Etat}}</th>
+                                    <th style="min-width:80px;width:140px;">{{Actions}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+
+                <fieldset style="margin-top: 20px;">
+                    <legend><i class="fas fa-cogs"></i> {{Commandes Timer Filtration}}</legend>
+                    <div class="table-responsive">
+                        <table id="table_cmd_timer_filtration" class="table table-bordered table-condensed">
+                            <thead>
+                                <tr>
+                                    <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
+                                    <th style="min-width:200px;width:350px;">{{Nom}}</th>
+                                    <th style="min-width:260px;">{{Options}}</th>
+                                    <th>{{Etat}}</th>
+                                    <th style="min-width:80px;width:140px;">{{Actions}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+
+                <fieldset style="margin-top: 20px;">
+                    <legend><i class="fas fa-cogs"></i> {{Commandes Timer Chauffage}}</legend>
+                    <div class="table-responsive">
+                        <table id="table_cmd_timer_heater" class="table table-bordered table-condensed">
+                            <thead>
+                                <tr>
+                                    <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
+                                    <th style="min-width:200px;width:350px;">{{Nom}}</th>
+                                    <th style="min-width:260px;">{{Options}}</th>
+                                    <th>{{Etat}}</th>
+                                    <th style="min-width:80px;width:140px;">{{Actions}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+
+                <fieldset style="margin-top: 20px;">
+                    <legend><i class="fas fa-cogs"></i> {{Commandes Timer Désinfection}}</legend>
+                    <div class="table-responsive">
+                        <table id="table_cmd_timer_sanitizer" class="table table-bordered table-condensed">
+                            <thead>
+                                <tr>
+                                    <th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
+                                    <th style="min-width:200px;width:350px;">{{Nom}}</th>
+                                    <th style="min-width:260px;">{{Options}}</th>
+                                    <th>{{Etat}}</th>
+                                    <th style="min-width:80px;width:140px;">{{Actions}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
             </div>
 
             <div role="tabpanel" class="tab-pane" id="programtab">

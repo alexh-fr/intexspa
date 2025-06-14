@@ -30,7 +30,7 @@ $('#bt_saveEqLogic').on('click', function (event) {
     }
 });
 
-// Alternative plus robuste avec validation en temps réel
+
 $('.eqLogicAttr[data-l2key="timeout"]').on('blur change', function() {
     var timeout = parseInt($(this).val());
     
@@ -70,6 +70,8 @@ function sortCommandsByID() {
 }
 
 function addCmdToTable(_cmd) {
+    console.table(_cmd)
+
     if (!isset(_cmd)) {
         var _cmd = { configuration: {} }
     }
@@ -104,9 +106,33 @@ function addCmdToTable(_cmd) {
     }
     tr += '<i class="fas fa-minus-circle pull-right cmdAction cursor" data-action="remove" title="{{Supprimer la commande}}"></i></td>'
     tr += '</tr>'
-    $('#table_cmd tbody').append(tr)
-    var tr = $('#table_cmd tbody tr').last()
 
+    idTable = "#table_cmd"
+    if(_cmd.logicalId.includes('_timer') || _cmd.logicalId.includes('_timers')) {
+        switch(true) {
+            case _cmd.logicalId.includes('filtration'):
+                idTable = "#table_cmd_timer_filtration"
+                break;
+            case _cmd.logicalId.includes('heater'):
+                idTable = "#table_cmd_timer_heater"
+                break;
+            case _cmd.logicalId.includes('sanitizer'):
+                idTable = "#table_cmd_timer_sanitizer"
+                break;
+            default:
+                idTable = "#table_cmd_timer"
+                break;
+        }
+    } else {
+        if(_cmd.type === 'info') {
+            idTable = "#table_cmd_info"
+        } else {
+            idTable = "#table_cmd_action"
+        }
+    }
+
+    $(idTable + ' tbody').append(tr)
+    var tr = $(idTable + ' tbody tr').last()
     tr.setValues(_cmd, '.cmdAttr')
     jeedom.cmd.changeType(tr, init(_cmd.subType))
 
