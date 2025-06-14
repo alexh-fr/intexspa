@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'jekyll', '~> 4.3'
+gem 'jekyll-theme-jeedom', git: 'https://github.com/jeedom/documentation-theme'
+gem 'jekyll-feed'
+gem 'jekyll-sitemap'
+gem 'jekyll-redirect-from'
+
+group :jekyll_plugins do
+  gem 'jekyll-timeago'
+  gem 'jekyll-paginate'
+end

@@ -1,0 +1,12 @@
+{
+    "236_heater": {
+        "eqLogic_id": "236",
+        "equipment": "heater",
+        "active": false,
+        "start_time": 1749598532,
+        "duration": 30000,
+        "end_time": 1749628562,
+        "duration_configured": 500,
+        "stopped_at": "2025-06-11 09:56:05"
+    }
+}

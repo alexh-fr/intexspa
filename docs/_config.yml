@@ -1,0 +1,47 @@
+# docs/_config.yml
+title: "Intexspa"
+description: "Documentation du plugin Jeedom 'Intexspa'"
+
+# Thème
+theme: jekyll-theme-cayman
+
+# Configuration
+baseurl: "/intexspa"
+url: "https://alexh-fr.github.io"
+
+# Langues supportées
+languages:
+  fr_FR:
+    title: "Intexspa"
+    description: "Documentation en français"
+
+# Configuration Jeedom
+jeedom:
+  version: "4.2"
+  plugin:
+    name: "Intexspa"
+    author: "Alex H."
+    category: "wellness"
+
+# Navigation
+navigation:
+  - title: "Installation"
+    url: "/installation"
+  - title: "Changelog"
+    url: "/changelog"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+markdown: kramdown
+highlighter: rouge
+
+# Configuration kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
